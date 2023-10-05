@@ -14,11 +14,14 @@ function draw() {
   background(232, 228, 214);
   fill(colors[floor(random(0, 3))]);
   let randomShape = shapes[floor(random(0, 3))];
+  if (randomShape == "triangle") {
+
+  }
   if (randomShape == "ellipse") {
-    ellipse(random(100, 250), random(150, 250), random(20, 50), random(20, 50));
+    ellipse(random(100, 250), random(150, 250), random(80, 120), random(80, 120));
   }
   if (randomShape == "rectangle") {
-    rect(random(100, 250), random(150, 250), random(20, 50), random(20, 50));
+    rect(random(100, 250), random(150, 250), random(80, 120), random(80, 120));
   }
   noLoop();
 }
