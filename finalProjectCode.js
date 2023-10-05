@@ -15,7 +15,7 @@ function draw() {
   fill(colors[floor(random(0, 3))]);
   let randomShape = shapes[floor(random(0, 3))];
   if (randomShape == "triangle") {
-
+triangle(100,200,150,70,200,200);
   }
   if (randomShape == "ellipse") {
     ellipse(random(100, 250), random(150, 250), random(80, 120), random(80, 120));
