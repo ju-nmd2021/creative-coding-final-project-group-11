@@ -95,9 +95,16 @@ function draw() {
       }
     }
   }
+  push();
+  strokeWeight(2);
+  stroke(0);
+  line(30,450,320,450);
+  pop();
+
   fill(0);
   textSize(18);
-  text("Bauhaus", 150, 450);
+  text("Bauhaus", 30, 470);
+  text("2023",280,470);
   noLoop();
 }
 
