@@ -22,7 +22,6 @@ function setup() {
 function draw() {
   background(232, 228, 214);
   fill(255);
-  rect(30, 30, 293, 390);
   for (let i = 0; i < 4; i += 1) {
     for (let l = 0; l < 5; l += 1) {
       fill(colors[floor(random(0, 3))]);
