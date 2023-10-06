@@ -3,16 +3,20 @@ let shapes;
 let colors;
 let spacingX;
 let spacingY;
+let startX;
+let startY;
 
 //Setup Canvas
 function setup() {
   createCanvas(353, 500);
   noStroke();
-  shapes = ["half-ellipse", "ellipse", "rectangle"];
+  shapes = ["ellipse", "rectangle","half-ellipse"];
   colors = [color(255, 0, 0), color(0, 255, 0), color(0, 0, 255)];
   ellipseMode(CORNER);
-  spacingX = 67.5;
-  spacingY = 75;
+  spacingX = 78;
+  spacingY = 83;
+  startX = 30;
+  startY = 30;
 }
 
 function draw() {
@@ -24,14 +28,14 @@ function draw() {
       fill(colors[floor(random(0, 3))]);
       let randomShape = shapes[floor(random(0, 3))];
       if (randomShape == "ellipse") {
-        ellipse(50 + spacingX * i, 40 + spacingY * l, random(40, 50));
+        ellipse(startX + spacingX * i, startY + spacingY * l, random(40, 60));
       }
       if (randomShape == "rectangle") {
         rect(
-          50 + spacingX * i,
-          40 + spacingY * l,
-          random(40, 50),
-          random(40, 50)
+          startX + spacingX * i,
+          startY + spacingY * l,
+          random(40, 60),
+          random(40, 60)
         );
       }
       if (randomShape == "half-ellipse") {
@@ -40,10 +44,10 @@ function draw() {
           let startAngle = HALF_PI;
           let endAngle = -HALF_PI;
           arc(
-            50 + spacingX * i,
-            40 + spacingY * l,
-            50,
-            50,
+            startX + spacingX * i,
+            startY + spacingY * l,
+            60,
+            60,
             startAngle,
             endAngle,
             PIE
@@ -53,10 +57,10 @@ function draw() {
           let startAngle = PI;
           let endAngle = 0;
           arc(
-            50 + spacingX * i,
-            40 + spacingY * l,
-            50,
-            50,
+            startX + spacingX * i,
+            startY + spacingY * l,
+            60,
+            60,
             startAngle,
             endAngle,
             PIE
@@ -66,10 +70,10 @@ function draw() {
           let startAngle = -HALF_PI;
           let endAngle = HALF_PI;
           arc(
-            50 + spacingX * i,
-            40 + spacingY * l,
-            50,
-            50,
+            startX + spacingX * i,
+            startY + spacingY * l,
+            60,
+            60,
             startAngle,
             endAngle,
             PIE
@@ -79,10 +83,10 @@ function draw() {
           let startAngle = 0;
           let endAngle = PI;
           arc(
-            50 + spacingX * i,
-            40 + spacingY * l,
-            50,
-            50,
+            startX + spacingX * i,
+            startY + spacingY * l,
+            60,
+            60,
             startAngle,
             endAngle,
             PIE
