@@ -9,6 +9,7 @@ let button;
 
 //Setup Canvas
 function setup() {
+  firstDraw = false;
   createCanvas(353, 500);
   noStroke();
   shapes = ["ellipse", "rectangle", "half-ellipse"];
@@ -18,10 +19,13 @@ function setup() {
   spacingY = 83;
   startX = 30;
   startY = 30;
+  generateButton();
+}
 
+function generateButton() {
   button = createButton("Generate Poster");
   button.mousePressed(generatePoster);
-  button.position(100, 100);
+  button.position(10, 70);
 }
 
 function draw() {
@@ -113,8 +117,9 @@ function draw() {
 }
 
 function generatePoster() {
-  setup();
-  draw();
+  // setup();
+  redraw();
+  // draw();
 }
 
 /*
