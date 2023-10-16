@@ -5,18 +5,23 @@ let spacingX;
 let spacingY;
 let startX;
 let startY;
+let button;
 
 //Setup Canvas
 function setup() {
   createCanvas(353, 500);
   noStroke();
-  shapes = ["ellipse", "rectangle","half-ellipse"];
+  shapes = ["ellipse", "rectangle", "half-ellipse"];
   colors = [color(255, 0, 0), color(0, 255, 0), color(0, 0, 255)];
   ellipseMode(CORNER);
   spacingX = 78;
   spacingY = 83;
   startX = 30;
   startY = 30;
+
+  button = createButton("Generate Poster");
+  button.mousePressed(generatePoster);
+  button.position(100, 100);
 }
 
 function draw() {
@@ -97,18 +102,19 @@ function draw() {
   push();
   strokeWeight(2);
   stroke(0);
-  line(30,450,320,450);
+  line(30, 450, 320, 450);
   pop();
 
   fill(0);
   textSize(18);
   text("Bauhaus", 30, 470);
-  text("2023",280,470);
+  text("2023", 280, 470);
   noLoop();
 }
 
-function mousePressed() {
-  loop();
+function generatePoster() {
+  setup();
+  draw();
 }
 
 /*
