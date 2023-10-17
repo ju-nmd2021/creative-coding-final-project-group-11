@@ -1,7 +1,7 @@
-const p5container = document.getElementById("p5container");
+const sadP5Container = document.getElementById("sadP5Container");
 
 addEventListener("DOMContentLoaded", () => {
-  p5container.innerHTML = "";
+  sadP5Container.innerHTML = "";
 
   const iframe = document.createElement("iframe");
   iframe.style.width = "353px";
@@ -24,7 +24,7 @@ addEventListener("DOMContentLoaded", () => {
 
   const codeScript = document.createElement("script");
   codeScript.type = "text/javascript";
-  codeScript.src = "../finalProjectCode.js";
+  codeScript.src = "../sadCode.js";
   codeScript.defer = true;
   bodyElement.appendChild(codeScript);
 
@@ -34,5 +34,5 @@ addEventListener("DOMContentLoaded", () => {
   bodyElement.appendChild(styleLink);
 
   iframe.srcdoc = bodyElement.innerHTML;
-  p5container.appendChild(iframe);
+  sadP5Container.appendChild(iframe);
 });
