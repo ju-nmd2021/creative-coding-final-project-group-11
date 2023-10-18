@@ -11,8 +11,8 @@ function setup() {
   firstDraw = false;
   createCanvas(353, 500);
   noStroke();
-  shapes = ["ellipse", "rectangle", "half-ellipse"];
-  colors = [color(255, 0, 0), color(0, 255, 0), color(0, 0, 255)];
+  shapes = ["ellipse", "half-ellipse"];
+  colors = [color(255, 242, 0), color(255, 140, 0)];
   ellipseMode(CORNER);
   spacingX = 78;
   spacingY = 83;
@@ -25,18 +25,10 @@ function draw() {
   fill(255);
   for (let i = 0; i < 4; i += 1) {
     for (let l = 0; l < 5; l += 1) {
-      fill(colors[floor(random(0, 3))]);
-      let randomShape = shapes[floor(random(0, 3))];
+      fill(colors[floor(random(0, 2))]);
+      let randomShape = shapes[floor(random(0, 2))];
       if (randomShape == "ellipse") {
         ellipse(startX + spacingX * i, startY + spacingY * l, random(40, 60));
-      }
-      if (randomShape == "rectangle") {
-        rect(
-          startX + spacingX * i,
-          startY + spacingY * l,
-          random(40, 60),
-          random(40, 60)
-        );
       }
       if (randomShape == "half-ellipse") {
         let randomHalfEllipse = floor(random(0, 4));
@@ -95,6 +87,7 @@ function draw() {
       }
     }
   }
+
   push();
   strokeWeight(2);
   stroke(0);
@@ -103,13 +96,7 @@ function draw() {
 
   fill(0);
   textSize(18);
-  text("Bauhaus", 30, 470);
+  text("Happiness", 30, 470);
   text("2023", 280, 470);
   noLoop();
 }
-/*
-
-        if (randomShape == "triangle") {
-          triangle(100, 200, 150, 70, 200, 200);
-        }
-*/
